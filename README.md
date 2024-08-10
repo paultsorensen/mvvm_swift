@@ -1,7 +1,11 @@
 # Swift/SwiftUI Reference Implementation of the MVVM design pattern
 
 ## MVC vs MVVM
-MVC is basically a mediator pattern where the Controller has knowledge of both the Model and View.
+MVC is basically a mediator pattern where the Controller has knowledge of both the Model and View. As a result, if the View changes 
+the Controller also needs to change. Also, if there are multiple implementations of a View (for different devices/form-factors) then 
+the Controller needs to know about them. Obviously there are ways to modularize/structure the controller to mitigate this, but 
+it still complicates the Controller - and also spreads knowledge abou the device/form-factor of the UI across two major components.
+
 
 ```
             +---------------+
